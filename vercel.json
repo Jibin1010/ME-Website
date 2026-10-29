@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd production && npm run build",
-  "outputDirectory": "production/.next",
-  "installCommand": "cd production && npm install"
-}

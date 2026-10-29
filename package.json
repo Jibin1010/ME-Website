@@ -7,7 +7,6 @@
     "dev": "npm --prefix production run dev",
     "build": "npm --prefix production run build",
     "start": "npm --prefix production run start",
-    "lint": "npm --prefix production run lint",
-    "postinstall": "npm --prefix production install"
+    "lint": "npm --prefix production run lint"
   }
 }
