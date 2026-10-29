@@ -1,0 +1,12 @@
+{
+  "name": "me-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketplace — Your Apps, All in One Place (React, Next.js, TypeScript)",
+  "scripts": {
+    "dev": "npm --prefix production run dev",
+    "build": "npm --prefix production run build",
+    "start": "npm --prefix production run start",
+    "lint": "npm --prefix production run lint"
+  }
+}
