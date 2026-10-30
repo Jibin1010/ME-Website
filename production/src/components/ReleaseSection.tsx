@@ -170,43 +170,6 @@ export function ReleaseSection() {
 
             </div>
 
-            {/* Google Drive Mirror Bar */}
-            <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 p-4 rounded-2xl border border-blue-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-              <div className="flex items-center space-x-3">
-                <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow font-bold text-sm">
-                  ▲
-                </div>
-                <div>
-                  <div className="flex items-center space-x-2">
-                    <span className="font-extrabold text-neutral-900 text-sm">Official Google Drive Mirror</span>
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Verified Cloud Host</span>
-                  </div>
-                  <p className="text-[11px] text-neutral-500 mt-0.5">High-speed global cloud mirror with APK, checksums & release notes</p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
-                <a
-                  href="https://drive.google.com/file/d/10ROof5SV7NG3FNzU9pLnIM3MaWPGSyHC/view?usp=drivesdk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-all text-center flex items-center justify-center space-x-1.5 hover:shadow-lg hover:-translate-y-0.5"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>Download APK (Drive)</span>
-                </a>
-                <a
-                  href="https://drive.google.com/drive/folders/1bGFHm9j_FOwyu5Vh40XNvGUDwBEAGYvp?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-bold text-xs shadow-sm transition-all text-center flex items-center justify-center space-x-1.5 hover:shadow hover:-translate-y-0.5"
-                >
-                  <span>Open Drive Folder</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-
             {/* QR Code expansion */}
             {showQr && (
               <div className="p-4 bg-neutral-50 rounded-2xl border border-neutral-200 flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
