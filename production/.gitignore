@@ -42,6 +42,9 @@ client_secret*.json
 *.p12
 *.crt
 
+# local assets archive
+/marketplace data/
+
 # binary packages
 *.apk
 *.zip

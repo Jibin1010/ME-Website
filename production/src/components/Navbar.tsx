@@ -41,8 +41,13 @@ export function Navbar({ onScrollToStore }: { onScrollToStore: () => void }) {
               }}
               className="flex items-center space-x-3 group text-left"
             >
-              <div className="w-10 h-10 rounded-2xl bg-neutral-950 text-white font-black text-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                M
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform flex-shrink-0 border border-amber-200/60">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="/showcase/bag-icon.png" 
+                  alt="Marketplace Icon" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-2xl tracking-tight text-neutral-950 block leading-tight">
