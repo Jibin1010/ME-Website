@@ -33,6 +33,19 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# credentials, secrets and tokens
+*.json.token
+token.json
+client_secret*.json
+*.pem
+*.key
+*.p12
+*.crt
+
+# binary packages
+*.apk
+*.zip
+
 # vercel
 .vercel
 

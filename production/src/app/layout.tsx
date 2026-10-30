@@ -118,6 +118,24 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined') {
+                setTimeout(function() {
+                  console.log(
+                    "%c🛑 STOP! SECURITY WARNING",
+                    "color: #FF5A28; font-size: 32px; font-weight: 900;"
+                  );
+                  console.log(
+                    "%cThis browser console is intended for developers. Never paste external scripts or commands here. This application is zero-trust hardened; no backend secrets, cloud storage credentials, or private keys are stored or accessible on the client.",
+                    "color: #121316; font-size: 13px; font-weight: 500; line-height: 1.5;"
+                  );
+                }, 600);
+              }
+            `,
+          }}
+        />
         <AppProvider>
           {children}
           <AppDetailModal />
