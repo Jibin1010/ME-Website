@@ -122,16 +122,43 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               if (typeof window !== 'undefined') {
+                // Security console banner
                 setTimeout(function() {
                   console.log(
-                    "%c🛑 STOP! SECURITY WARNING",
+                    "%c🛑 STOP! ZERO-TRUST SECURITY ACTIVE",
                     "color: #FF5A28; font-size: 32px; font-weight: 900;"
                   );
                   console.log(
-                    "%cThis browser console is intended for developers. Never paste external scripts or commands here. This application is zero-trust hardened; no backend secrets, cloud storage credentials, or private keys are stored or accessible on the client.",
+                    "%cThis application is zero-trust hardened. No backend secrets, cloud credentials, or private keys are stored or accessible on the client. All administrative endpoints and cloud storage are strictly isolated.",
                     "color: #121316; font-size: 13px; font-weight: 500; line-height: 1.5;"
                   );
-                }, 600);
+                }, 500);
+
+                // Anti-Inspect Deterrent: Block Right-Click Context Menu (except in input fields)
+                document.addEventListener('contextmenu', function(e) {
+                  var tag = e.target && e.target.tagName;
+                  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+                  e.preventDefault();
+                });
+
+                // Anti-Inspect Deterrent: Block common DevTools shortcuts (F12, Ctrl+Shift+I/J/C, Cmd+Opt+I/J/C, Ctrl+U)
+                document.addEventListener('keydown', function(e) {
+                  // F12
+                  if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                  }
+                  // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C or Mac equivalents
+                  if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].indexOf(e.key) !== -1) {
+                    e.preventDefault();
+                    return false;
+                  }
+                  // Ctrl+U or Cmd+Alt+U (View Page Source)
+                  if ((e.ctrlKey || (e.metaKey && e.altKey)) && (e.key === 'u' || e.key === 'U')) {
+                    e.preventDefault();
+                    return false;
+                  }
+                });
               }
             `,
           }}
