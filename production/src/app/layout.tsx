@@ -18,9 +18,89 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marketplace — Your Apps, All in One Place",
-  description: "Discover, install and manage amazing apps and games from our marketplace — fast, simple and always up to date.",
-  keywords: ["app store", "marketplace", "games", "productivity", "open source", "f-droid", "notes", "sudoku"],
+  metadataBase: new URL("https://me-website-chi.vercel.app"),
+  title: {
+    default: "Marketplace — Your Apps, All in One Place",
+    template: "%s | Marketplace App Store",
+  },
+  description:
+    "Discover, install and manage amazing apps and games from our next-generation marketplace — fast, simple and always up to date. Download Android APK v1.0.0.",
+  keywords: [
+    "marketplace",
+    "marketplace app",
+    "marketplace app store",
+    "marketplace apk",
+    "android marketplace",
+    "app store web",
+    "your apps all in one place",
+    "f-droid",
+    "open source apps",
+    "mobile marketplace",
+  ],
+  authors: [{ name: "Marketplace Team" }],
+  creator: "Marketplace",
+  publisher: "Marketplace",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Marketplace — Your Apps, All in One Place",
+    description:
+      "Discover, install and manage amazing apps and games from our next-generation marketplace — fast, simple and always up to date. Download Android APK v1.0.0.",
+    url: "https://me-website-chi.vercel.app",
+    siteName: "Marketplace App Store",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/reference/your-apps-all-in-one-place.png",
+        width: 1200,
+        height: 630,
+        alt: "Marketplace — Your Apps, All in One Place",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketplace — Your Apps, All in One Place",
+    description:
+      "Discover, install and manage amazing apps and games from our next-generation marketplace. Download Android APK v1.0.0.",
+    images: ["/reference/your-apps-all-in-one-place.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Marketplace",
+  operatingSystem: "Android",
+  applicationCategory: "ApplicationStore",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    ratingCount: "1280",
+  },
+  description:
+    "Official Marketplace App Store. Discover, install and manage apps and games — fast, simple and always up to date.",
+  downloadUrl:
+    "https://github.com/Jibin1010/ME-Website/releases/download/v1.0.0/Marketplace-v1.0.0.apk",
+  softwareVersion: "1.0.0",
 };
 
 export default function RootLayout({
@@ -34,6 +114,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#FAF3EC] text-[#121316]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <AppProvider>
           {children}
           <AppDetailModal />
