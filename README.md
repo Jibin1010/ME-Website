@@ -42,6 +42,13 @@ ME-Website/
 
 ---
 
+## 📥 Official Release v1.0.0
+- **Direct APK**: [Marketplace-v1.0.0.apk](https://github.com/Jibin1010/ME-Website/releases/download/v1.0.0/Marketplace-v1.0.0.apk) (66.1 MB)
+- **Release Bundle (.ZIP)**: [Marketplace-v1.0.0-release.zip](https://github.com/Jibin1010/ME-Website/releases/download/v1.0.0/Marketplace-v1.0.0-release.zip) (36 MB)
+- **Google Drive Mirror**: [Marketplace Releases v1.0.0](https://drive.google.com/drive/folders/1bGFHm9j_FOwyu5Vh40XNvGUDwBEAGYvp?usp=sharing)
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
