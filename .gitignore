@@ -39,3 +39,11 @@ production/release/v1.0.0/*.apk
 *.tsbuildinfo
 next-env.d.ts
 
+# API Credentials & Tokens
+google drive api/
+*.json.token
+token.json
+client_secret*.json
+*.p12
+
+
