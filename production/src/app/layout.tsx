@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://me-website-chi.vercel.app"),
+  metadataBase: new URL("https://marketplace-store.vercel.app"),
   title: {
     default: "Marketplace — Your Apps, All in One Place",
     template: "%s | Marketplace App Store",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Marketplace — Your Apps, All in One Place",
     description:
       "Discover, install and manage amazing apps and games from our next-generation marketplace — fast, simple and always up to date. Download Android APK v1.0.0.",
-    url: "https://me-website-chi.vercel.app",
+    url: "https://marketplace-store.vercel.app",
     siteName: "Marketplace App Store",
     locale: "en_US",
     type: "website",
