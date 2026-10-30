@@ -136,8 +136,7 @@ export function ReleaseSection() {
               
               {/* Primary APK Download Button */}
               <a
-                href="/release/v1.0.0/Marketplace-v1.0.0.apk"
-                download="Marketplace-v1.0.0.apk"
+                href="https://github.com/Jibin1010/ME-Website/releases/download/v1.0.0/Marketplace-v1.0.0.apk"
                 className="group relative overflow-hidden flex items-center justify-between p-4 rounded-2xl bg-neutral-950 hover:bg-black text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5"
               >
                 <div className="flex items-center space-x-3">
@@ -146,7 +145,7 @@ export function ReleaseSection() {
                   </div>
                   <div>
                     <span className="text-sm font-bold block leading-tight">Download APK</span>
-                    <span className="text-[11px] text-neutral-400">Direct file • 66.1 MB</span>
+                    <span className="text-[11px] text-neutral-400">Direct CDN • 66.1 MB</span>
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
@@ -154,8 +153,7 @@ export function ReleaseSection() {
 
               {/* Full Release ZIP Button */}
               <a
-                href="/release/Marketplace-v1.0.0-release.zip"
-                download="Marketplace-v1.0.0-release.zip"
+                href="https://github.com/Jibin1010/ME-Website/releases/download/v1.0.0/Marketplace-v1.0.0-release.zip"
                 className="group flex items-center justify-between p-4 rounded-2xl bg-white hover:bg-neutral-50 text-neutral-900 border border-neutral-200 shadow-sm hover:shadow transition-all duration-200 hover:-translate-y-0.5"
               >
                 <div className="flex items-center space-x-3">
@@ -195,7 +193,7 @@ export function ReleaseSection() {
                   className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-all text-center flex items-center justify-center space-x-1.5 hover:shadow-lg hover:-translate-y-0.5"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  <span>Download APK</span>
+                  <span>Download APK (Drive)</span>
                 </a>
                 <a
                   href="https://drive.google.com/drive/folders/1bGFHm9j_FOwyu5Vh40XNvGUDwBEAGYvp?usp=sharing"
@@ -203,7 +201,7 @@ export function ReleaseSection() {
                   rel="noopener noreferrer"
                   className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-bold text-xs shadow-sm transition-all text-center flex items-center justify-center space-x-1.5 hover:shadow hover:-translate-y-0.5"
                 >
-                  <span>Open Folder</span>
+                  <span>Open Drive Folder</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
