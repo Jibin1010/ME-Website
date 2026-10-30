@@ -23,7 +23,6 @@ export function ReleaseSection() {
   const { addToast } = useApp();
   const [copiedHash, setCopiedHash] = useState<'sha256' | 'sha1' | null>(null);
   const [showQr, setShowQr] = useState(false);
-  const [activeGalleryTab, setActiveGalleryTab] = useState<'icon' | 'system' | 'styleboard' | 'showcase'>('icon');
 
   const sha256Hash = 'c1709bc381255d80a01badbbaea727a1e84f00a677f93cb0f66630c313fafca0';
   const sha1Hash = '65c0eaebf3121a63d1429722ba77e394f7967313';
@@ -264,86 +263,26 @@ export function ReleaseSection() {
         </div>
       </div>
 
-      {/* Visual Design System Showcase Gallery */}
+      {/* Visual Design System Showcase */}
       <div className="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-neutral-100">
           <div>
             <h3 className="text-lg font-extrabold text-neutral-900">Design System & App Showcase</h3>
             <p className="text-xs text-neutral-500">Official Figma styleboards and architecture specifications</p>
           </div>
-
-          <div className="flex bg-neutral-100 p-1 rounded-2xl text-xs font-bold text-neutral-700">
-            <button
-              onClick={() => setActiveGalleryTab('icon')}
-              className={`px-3 py-1.5 rounded-xl transition-all ${
-                activeGalleryTab === 'icon' ? 'bg-white shadow text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
-              }`}
-            >
-              3D Bag Icon
-            </button>
-            <button
-              onClick={() => setActiveGalleryTab('system')}
-              className={`px-3 py-1.5 rounded-xl transition-all ${
-                activeGalleryTab === 'system' ? 'bg-white shadow text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
-              }`}
-            >
-              Design System
-            </button>
-            <button
-              onClick={() => setActiveGalleryTab('styleboard')}
-              className={`px-3 py-1.5 rounded-xl transition-all ${
-                activeGalleryTab === 'styleboard' ? 'bg-white shadow text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
-              }`}
-            >
-              Styleboard
-            </button>
-            <button
-              onClick={() => setActiveGalleryTab('showcase')}
-              className={`px-3 py-1.5 rounded-xl transition-all ${
-                activeGalleryTab === 'showcase' ? 'bg-white shadow text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
-              }`}
-            >
-              App Showcase
-            </button>
-          </div>
+          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200/60 w-fit">
+            Verified Figma Specs
+          </span>
         </div>
 
-        {/* Gallery Image Display */}
+        {/* Showcase Image Display */}
         <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 shadow-inner">
-          {activeGalleryTab === 'icon' && (
-            <div className="p-8 flex items-center justify-center bg-gradient-to-br from-[#FAF2DC] via-[#FDF7E7] to-[#F7EAC4]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
-                src="/showcase/bag-icon.png" 
-                alt="3D Bag Icon" 
-                className="max-h-[380px] w-auto object-contain rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300" 
-              />
-            </div>
-          )}
-          {activeGalleryTab === 'system' && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img 
-              src="/showcase/design-system.png" 
-              alt="Warm Marketplace Design System" 
-              className="w-full h-auto object-contain" 
-            />
-          )}
-          {activeGalleryTab === 'styleboard' && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img 
-              src="/showcase/styleboard.png" 
-              alt="Warm Marketplace Styleboard" 
-              className="w-full h-auto object-contain" 
-            />
-          )}
-          {activeGalleryTab === 'showcase' && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img 
-              src="/showcase/design-showcase.png" 
-              alt="Marketplace App Flow Showcase" 
-              className="w-full h-auto object-contain" 
-            />
-          )}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/showcase/design-showcase.png" 
+            alt="Marketplace App Flow Showcase" 
+            className="w-full h-auto object-contain" 
+          />
         </div>
       </div>
 
