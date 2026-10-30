@@ -10,7 +10,8 @@ import {
   Briefcase,
   Star,
   ShieldCheck,
-  MousePointerClick
+  MousePointerClick,
+  Download
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { InteractivePhone } from './InteractivePhone';
@@ -97,6 +98,14 @@ export function HeroSection({ onExploreClick }: HeroSectionProps) {
                 <span>Live Phone Simulator</span>
               </button>
             </div>
+
+            <a
+              href="#releases-section"
+              className="px-3.5 py-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-1.5"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Get APK v1.0.0</span>
+            </a>
 
             <button
               onClick={() => setIsPublishOpen(true)}
@@ -288,6 +297,14 @@ export function HeroSection({ onExploreClick }: HeroSectionProps) {
               </div>
 
               <div className="flex items-center space-x-3">
+                <a
+                  href="#releases-section"
+                  className="font-bold text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-3 py-1 rounded-full flex items-center space-x-1 transition-colors"
+                >
+                  <Download className="w-3 h-3 text-emerald-600" />
+                  <span>Download v1.0.0 APK</span>
+                </a>
+
                 <button
                   onClick={onExploreClick}
                   className="font-bold text-[#FF5A28] hover:underline flex items-center space-x-1"

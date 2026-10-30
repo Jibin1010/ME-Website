@@ -25,7 +25,15 @@ yarn-error.log*
 
 # OS files
 .DS_Store
+*.DS_Store
 *.pem
+
+# Release Binaries (hosted on Google Drive)
+*.apk
+*.zip
+production/public/release/*.apk
+production/public/release/*.zip
+production/release/v1.0.0/*.apk
 
 # TypeScript
 *.tsbuildinfo

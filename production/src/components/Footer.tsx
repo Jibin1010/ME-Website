@@ -4,7 +4,8 @@ import React from 'react';
 import { 
   ShieldCheck, 
   RotateCcw, 
-  PlusCircle 
+  PlusCircle,
+  Download
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
@@ -62,6 +63,15 @@ export function Footer() {
               App Store Features
             </h4>
             <ul className="space-y-2 text-xs text-neutral-600">
+              <li>
+                <a
+                  href="#releases-section"
+                  className="hover:text-emerald-700 font-bold text-emerald-800 flex items-center space-x-1"
+                >
+                  <Download className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>Download Android APK v1.0.0</span>
+                </a>
+              </li>
               <li>
                 <button 
                   onClick={() => setIsPublishOpen(true)}

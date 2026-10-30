@@ -8,7 +8,9 @@ import {
   Menu, 
   X, 
   Compass, 
-  LayoutGrid
+  LayoutGrid,
+  Download,
+  Smartphone
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
@@ -103,6 +105,14 @@ export function Navbar({ onScrollToStore }: { onScrollToStore: () => void }) {
                   </span>
                 )}
               </button>
+
+              <a
+                href="#releases-section"
+                className="px-4 py-2 rounded-full transition-colors text-neutral-600 hover:text-neutral-950 hover:bg-neutral-100/60 flex items-center space-x-1.5"
+              >
+                <Smartphone className="w-4 h-4 text-emerald-600" />
+                <span>v1.0.0 Release</span>
+              </a>
             </nav>
           </div>
 
@@ -133,6 +143,16 @@ export function Navbar({ onScrollToStore }: { onScrollToStore: () => void }) {
 
           {/* Right Action Controls */}
           <div className="hidden sm:flex items-center space-x-3">
+            {/* Download APK Pill */}
+            <a
+              href="#releases-section"
+              className="px-3.5 py-2 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200/70 text-xs font-bold transition-all flex items-center space-x-1.5 shadow-sm"
+              title="Download Android APK v1.0.0"
+            >
+              <Download className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Get APK v1.0.0</span>
+            </a>
+
             {/* Put Your App Button */}
             <button
               onClick={() => setIsPublishOpen(true)}

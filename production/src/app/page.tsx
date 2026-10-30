@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
+import { ReleaseSection } from '../components/ReleaseSection';
 import { AppCatalog } from '../components/AppCatalog';
 import { MyAppsView } from '../components/MyAppsView';
 import { Footer } from '../components/Footer';
@@ -36,6 +37,9 @@ export default function Home() {
           <>
             {/* The Hero Showcase: directly integrated into the website page (no separate popup!) */}
             <HeroSection onExploreClick={handleScrollToStore} />
+
+            {/* Official Android Release v1.0.0 Section */}
+            <ReleaseSection />
 
             {/* Developer Banner: "Put Your App in Store" */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
